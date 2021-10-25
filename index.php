@@ -1,1 +1,1 @@
-“<html> Frontend </html>
+<?php phpinfo(); ?>
