@@ -1,2 +1,2 @@
 <?php phpinfo(); ?>
-integracao
+modificacao na integracao
