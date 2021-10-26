@@ -1,2 +1,2 @@
 <?php phpinfo(); ?>
-endpoints
+modificacao do endpoints
