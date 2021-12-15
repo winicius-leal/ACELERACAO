@@ -10,14 +10,9 @@ class UsuarioController extends Controller
 {
     public function index(){
 
-        $usuario = new Usuario("Wiinciius", 21);   
+        $usuario = new Usuario("Winicius Leal", 24);   
         $perfil = $usuario->getDados();
-
-        $documento = Documento::all();
-
-        Log::channel("documentos")->info("dados buscados com sucesso");
-
-        return view("perfil", compact("perfil", "documento"));
+        return view("perfil", compact("perfil"));
 
     }
 }

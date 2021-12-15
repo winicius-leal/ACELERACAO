@@ -7,5 +7,5 @@ use Illuminate\Database\Eloquent\Model;
 
 class Assinatura extends Model
 {
-    use HasFactory;
+    protected $fillable = ["qntCharactersSignature", "defaultSignature", "subscriptionNumberUsed"];
 }
