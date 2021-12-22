@@ -1,0 +1,242 @@
+{
+	"id": "d2901f62-761f-e24b-1eb5-0d1fc5acc318",
+	"name": "API Laravel",
+	"description": "",
+	"order": [
+		"aeee50dc-692e-b6fc-f421-45f21a2f2d59",
+		"110e02d7-23d0-287f-6e8a-614dae92cdda",
+		"ca95f2c0-5b76-6311-357f-4aa98e909138",
+		"dcc9c702-8dc7-9ba0-24dd-68b2101e3e6c",
+		"b84e6073-dac8-4404-b4f3-b5ba15109544",
+		"fc14c491-d900-3db0-ee59-e0d4b9508908"
+	],
+	"folders": [],
+	"folders_order": [],
+	"timestamp": 1640021611111,
+	"owner": "18867534",
+	"public": false,
+	"requests": [
+		{
+			"id": "110e02d7-23d0-287f-6e8a-614dae92cdda",
+			"headers": "",
+			"headerData": [],
+			"url": "http://localhost:8000/api/documentos/show/2",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "GET",
+			"collectionId": "d2901f62-761f-e24b-1eb5-0d1fc5acc318",
+			"data": null,
+			"dataMode": "params",
+			"name": "busca um documento especifico",
+			"description": "busca um documento especifico",
+			"descriptionFormat": "html",
+			"time": 1640026319077,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		},
+		{
+			"id": "aeee50dc-692e-b6fc-f421-45f21a2f2d59",
+			"headers": "",
+			"headerData": [],
+			"url": "http://localhost:8000/api/documentos/index",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "GET",
+			"collectionId": "d2901f62-761f-e24b-1eb5-0d1fc5acc318",
+			"data": null,
+			"dataMode": "params",
+			"name": "busca documentos",
+			"description": "rota para buscar todos os documentos da minha API do laravel",
+			"descriptionFormat": "html",
+			"time": 1640026280811,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		},
+		{
+			"id": "b84e6073-dac8-4404-b4f3-b5ba15109544",
+			"headers": "",
+			"headerData": [],
+			"url": "http://localhost:8000/api/documentos/destroy/4",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "DELETE",
+			"data": null,
+			"dataMode": "params",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1640208232404,
+			"name": "remove um documento",
+			"description": "",
+			"collectionId": "d2901f62-761f-e24b-1eb5-0d1fc5acc318",
+			"responses": []
+		},
+		{
+			"id": "ca95f2c0-5b76-6311-357f-4aa98e909138",
+			"headers": "Content-Type: application/x-www-form-urlencoded\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/x-www-form-urlencoded",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:8000/api/documentos/store",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "POST",
+			"collectionId": "d2901f62-761f-e24b-1eb5-0d1fc5acc318",
+			"data": [
+				{
+					"key": "title",
+					"value": "Boas praticas PHP",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "sizeInMB",
+					"value": "4",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "subscriptionNumber",
+					"value": "4",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "signature",
+					"value": "leal",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "qntPages",
+					"value": "4",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "urlencoded",
+			"name": "novo documento",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1640026346724,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		},
+		{
+			"id": "dcc9c702-8dc7-9ba0-24dd-68b2101e3e6c",
+			"headers": "Content-Type: application/x-www-form-urlencoded\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/x-www-form-urlencoded",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:8000/api/documentos/update/4",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "PUT",
+			"collectionId": "d2901f62-761f-e24b-1eb5-0d1fc5acc318",
+			"data": [
+				{
+					"key": "title",
+					"value": "Boas praticas PHP",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "sizeInMB",
+					"value": "5",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "subscriptionNumber",
+					"value": "5",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "signature",
+					"value": "leal",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "qntPages",
+					"value": "5",
+					"description": "",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "urlencoded",
+			"name": "edita um documento ",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1640026412756,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		},
+		{
+			"id": "fc14c491-d900-3db0-ee59-e0d4b9508908",
+			"headers": "",
+			"headerData": [],
+			"url": "http://localhost:8000/api/documentos",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "GET",
+			"collectionId": "d2901f62-761f-e24b-1eb5-0d1fc5acc318",
+			"data": null,
+			"dataMode": "params",
+			"name": "teste",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1640026560119,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		}
+	]
+}
