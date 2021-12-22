@@ -35,6 +35,9 @@
         <a href="{{route('documento.create')}}">
             <button class="btn btn-success">Criar novo documento</button>
         </a>
+        <hr>
+        
+        {{ $documentos->links() }}
         
     </body>
 </html>

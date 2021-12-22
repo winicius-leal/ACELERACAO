@@ -11,8 +11,14 @@
         <hr>
         <a href="{{route('documento.index')}}">Voltar para a tela inicial</a>
         
-        <a href="{{route('documento.destroy', $documento->id)}}">
-            <button class="btn btn-danger">Deletar este documento</button>
+        <form action="{{route('documento.destroy', $documento->id)}}" method="post">
+            @csrf
+            @method('delete')
+            <button class="btn btn-danger" type="submit">Deletar este documento</button>
+        </form>    
+
+        <a href="{{route('documento.edit', $documento->id)}}">
+            <button class="btn btn-primary">Alterar este documento</button>
         </a>
 
     </body>
