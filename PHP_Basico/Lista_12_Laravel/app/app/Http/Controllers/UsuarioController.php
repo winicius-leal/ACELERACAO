@@ -15,4 +15,14 @@ class UsuarioController extends Controller
         return view("perfil", compact("perfil"));
 
     }
+    public function login(){
+        $usuario = new Usuario("Winicius Leal", 24);   
+        $usuario = $usuario->getDados();
+        session(["usuario"=>$usuario]);
+        return redirect()->route("usuario.index")->with("success", "login efetuado com sucesso");
+    }
+    public function logoff(){
+        session()->forget("usuario");
+        return redirect()->route("usuario.index")->with("success", "logoff efetuado com sucesso");
+    }
 }
