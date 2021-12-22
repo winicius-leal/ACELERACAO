@@ -17,7 +17,7 @@ class verificaAutenticacao
     public function handle(Request $request, Closure $next)
     {
         if(!session()->has("usuario")){
-            return redirect()->route("usuario.index")->with("danger", "Para deletar, criar ou editar é necessario fazer login");
+            return redirect()->route("usuario.index")->with("danger", "Para deletar ou alterar é necessario fazer login");
         }
         return $next($request);
     }
