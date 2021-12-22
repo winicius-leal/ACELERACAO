@@ -14,6 +14,7 @@ class DocumentoSeeder extends Seeder
      */
     public function run()
     {
+        /*
         \App\Models\Documento::create([
             'title'=>"Primeiro Documento Criado pelo Seeder",
             'sizeInMB'=>3,
@@ -35,5 +36,9 @@ class DocumentoSeeder extends Seeder
             'signature'=>"leal",
             'qntPages'=>10
         ]);
+        */
+
+        //cria 600 create da factory de Documentos
+        \App\Models\Documento::factory(600)->create();
     }
 }
