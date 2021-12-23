@@ -4,6 +4,8 @@ namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\RequestDocumentoInsertUpdate;
+use App\Http\Resources\DocumentoResource;
+use App\Http\Resources\DocumentoResourceCollection;
 use App\Models\Documento;
 use Facade\FlareClient\Http\Response;
 use Illuminate\Http\Request;
@@ -14,7 +16,8 @@ class DocumentoController extends Controller
 {
     function index(){
         $documentos = Documento::all();
-       return response()->json($documentos);
+       //return response()->json($documentos);
+       return new DocumentoResourceCollection($documentos);
     }
 
     public function store(Request $request){
@@ -27,7 +30,8 @@ class DocumentoController extends Controller
         if(!$documento){
             return response()->json(["code"=>500,"msg"=>"nao foi possivel encontrar o id fornecido"]);
         }
-        return response()->json($documento);
+        return new DocumentoResource($documento);
+        //return response()->json($documento);
     }
 
     public function destroy($id){
