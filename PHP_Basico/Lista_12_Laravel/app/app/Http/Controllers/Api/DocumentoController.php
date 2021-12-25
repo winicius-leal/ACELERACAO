@@ -20,7 +20,7 @@ class DocumentoController extends Controller
        return new DocumentoResourceCollection($documentos);
     }
 
-    public function store(Request $request){
+    public function store(RequestDocumentoInsertUpdate $request){
         $documento = Documento::create($request->all());
         return response()->json($documento);
     }
@@ -42,7 +42,7 @@ class DocumentoController extends Controller
         $documento->delete();
         return response()->json(["code"=>200,"msg"=>"documento removido com sucesso"]);
     }
-    public function update(Request $request , $id){
+    public function update(RequestDocumentoInsertUpdate $request , $id){
         $documento = Documento::findOrFail($id);
         if(!$documento){
             return response()->json(["code"=>500,"msg"=>"nao foi possivel encontrar o id fornecido"]);
