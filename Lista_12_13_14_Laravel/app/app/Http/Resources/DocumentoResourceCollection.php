@@ -19,12 +19,12 @@ class DocumentoResourceCollection extends ResourceCollection
             "data"=>$this->collection
         ];
     }
-    /*
+    /* função para adicionar mais um dado no retorno da resposta
     public function with($request)
     {
         //retorna separado
         return [
-            "extra_information"=>"testando"
+            "extra_information"=>"API em fase de teste"
         ];
     }
     */

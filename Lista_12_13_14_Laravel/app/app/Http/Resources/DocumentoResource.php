@@ -14,11 +14,12 @@ class DocumentoResource extends JsonResource
      */
     public function toArray($request)
     {
-        //retorna dados como voce deseja na saida da resposta
+        //definição: retorna dados como voce deseja na saida da resposta
         
-
+        //retorna todos os atributos do request
         return parent::toArray($request);
-        /*
+
+        /* retorna os atributos selecionados da forma que deseja
         return [
             "id"=> $this->id,
             "title"=> $this->title,
