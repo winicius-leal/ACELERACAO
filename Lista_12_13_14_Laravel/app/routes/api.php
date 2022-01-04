@@ -24,3 +24,9 @@ Route::get("documentos/show/{id}", [DocumentoController::class, 'show']);
 Route::post("documentos/store", [DocumentoController::class, 'store']);
 Route::put("documentos/update/{id}", [DocumentoController::class, 'update']);
 Route::delete("documentos/destroy/{id}", [DocumentoController::class, 'destroy'])->middleware("auth.basic");
+
+/*
+Route::namespace('App\Http\Controllers\Api')->group(function(){
+    Route::apiResource("/documentos","DocumentoController");
+});
+*/

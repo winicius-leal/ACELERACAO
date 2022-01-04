@@ -8,7 +8,8 @@
 		"ca95f2c0-5b76-6311-357f-4aa98e909138",
 		"dcc9c702-8dc7-9ba0-24dd-68b2101e3e6c",
 		"b84e6073-dac8-4404-b4f3-b5ba15109544",
-		"fc14c491-d900-3db0-ee59-e0d4b9508908"
+		"fc14c491-d900-3db0-ee59-e0d4b9508908",
+		"c92fbf40-7608-e69d-0ccf-f88da1fa4966"
 	],
 	"folders": [],
 	"folders_order": [],
@@ -43,24 +44,30 @@
 			"id": "aeee50dc-692e-b6fc-f421-45f21a2f2d59",
 			"headers": "",
 			"headerData": [],
-			"url": "http://localhost:8000/api/documentos/index",
-			"queryParams": [],
+			"url": "http://localhost:8000/api/documentos/index?campo=4",
+			"queryParams": [
+				{
+					"key": "campo",
+					"value": "4",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"preRequestScript": null,
 			"pathVariables": {},
 			"pathVariableData": [],
-			"preRequestScript": null,
 			"method": "GET",
-			"collectionId": "d2901f62-761f-e24b-1eb5-0d1fc5acc318",
 			"data": null,
 			"dataMode": "params",
-			"name": "busca documentos",
-			"description": "rota para buscar todos os documentos da minha API do laravel",
-			"descriptionFormat": "html",
-			"time": 1640026280811,
-			"version": 2,
-			"responses": [],
 			"tests": null,
 			"currentHelper": "normal",
-			"helperAttributes": {}
+			"helperAttributes": {},
+			"time": 1641241778995,
+			"name": "busca documentos",
+			"description": "rota para buscar todos os documentos da minha API do laravel",
+			"collectionId": "d2901f62-761f-e24b-1eb5-0d1fc5acc318",
+			"responses": []
 		},
 		{
 			"id": "b84e6073-dac8-4404-b4f3-b5ba15109544",
@@ -79,6 +86,43 @@
 			"helperAttributes": {},
 			"time": 1640208232404,
 			"name": "remove um documento",
+			"description": "",
+			"collectionId": "d2901f62-761f-e24b-1eb5-0d1fc5acc318",
+			"responses": []
+		},
+		{
+			"id": "c92fbf40-7608-e69d-0ccf-f88da1fa4966",
+			"headers": "",
+			"headerData": [],
+			"url": "http://localhost:8000/api/documentos/index?fields=title&conditions=id:=:5",
+			"queryParams": [
+				{
+					"key": "fields",
+					"value": "title",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "conditions",
+					"value": "id:=:5",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": null,
+			"dataMode": "params",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1641327182789,
+			"name": "busca documentos com filtro por campo e condição",
 			"description": "",
 			"collectionId": "d2901f62-761f-e24b-1eb5-0d1fc5acc318",
 			"responses": []
@@ -219,24 +263,31 @@
 			"id": "fc14c491-d900-3db0-ee59-e0d4b9508908",
 			"headers": "",
 			"headerData": [],
-			"url": "http://localhost:8000/api/documentos",
-			"queryParams": [],
+			"url": "http://localhost:8000/api/documentos/index?fields=id",
+			"queryParams": [
+				{
+					"key": "fields",
+					"value": "id",
+					"equals": true,
+					"description": "",
+					"enabled": true
+				}
+			],
+			"preRequestScript": null,
 			"pathVariables": {},
 			"pathVariableData": [],
-			"preRequestScript": null,
 			"method": "GET",
-			"collectionId": "d2901f62-761f-e24b-1eb5-0d1fc5acc318",
 			"data": null,
 			"dataMode": "params",
-			"name": "teste",
-			"description": "",
-			"descriptionFormat": "html",
-			"time": 1640026560119,
 			"version": 2,
-			"responses": [],
 			"tests": null,
 			"currentHelper": "normal",
-			"helperAttributes": {}
+			"helperAttributes": {},
+			"time": 1641302125675,
+			"name": "busca documentos com filtro por campo",
+			"description": "",
+			"collectionId": "d2901f62-761f-e24b-1eb5-0d1fc5acc318",
+			"responses": []
 		}
 	]
 }
