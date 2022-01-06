@@ -5,6 +5,8 @@
 	"order": [
 		"aeee50dc-692e-b6fc-f421-45f21a2f2d59",
 		"0834c2a8-f8c2-7ea0-fead-3dbb8f675725",
+		"00d8bf19-0dec-30dd-9c99-45a1e1ab6636",
+		"aca72d6c-cb8d-d90a-1662-aae1ba9246cd",
 		"110e02d7-23d0-287f-6e8a-614dae92cdda",
 		"ca95f2c0-5b76-6311-357f-4aa98e909138",
 		"dcc9c702-8dc7-9ba0-24dd-68b2101e3e6c",
@@ -18,6 +20,47 @@
 	"owner": "18867534",
 	"public": false,
 	"requests": [
+		{
+			"id": "00d8bf19-0dec-30dd-9c99-45a1e1ab6636",
+			"headers": "Accept: application/json\nContent-Type: application/json\nAuthorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTY0MTUwMDAzNSwiZXhwIjoxNjQxNTAzNjM1LCJuYmYiOjE2NDE1MDAwMzUsImp0aSI6IkV3dXVWVDQyaHl4T2hKUnQiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.YNiynhjo10W-Bia2hVhvK3UDSt3Ow4tTannMLaamW78\n",
+			"headerData": [
+				{
+					"key": "Accept",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTY0MTUwMDAzNSwiZXhwIjoxNjQxNTAzNjM1LCJuYmYiOjE2NDE1MDAwMzUsImp0aSI6IkV3dXVWVDQyaHl4T2hKUnQiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.YNiynhjo10W-Bia2hVhvK3UDSt3Ow4tTannMLaamW78",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:8000/api/logout",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1641502151959,
+			"name": "logout jwt",
+			"description": "rota para buscar todos os documentos da minha API do laravel",
+			"collectionId": "d2901f62-761f-e24b-1eb5-0d1fc5acc318",
+			"responses": [],
+			"rawModeData": "{\n \"email\":\"ryan.maritza@example.com\",\n \"password\":\"password\"\n}"
+		},
 		{
 			"id": "0834c2a8-f8c2-7ea0-fead-3dbb8f675725",
 			"headers": "Accept: application/json\nContent-Type: application/json\n",
@@ -46,8 +89,8 @@
 			"tests": null,
 			"currentHelper": "normal",
 			"helperAttributes": {},
-			"time": 1641496805081,
-			"name": "login",
+			"time": 1641502154050,
+			"name": "login jwt",
 			"description": "rota para buscar todos os documentos da minha API do laravel",
 			"collectionId": "d2901f62-761f-e24b-1eb5-0d1fc5acc318",
 			"responses": [],
@@ -81,19 +124,60 @@
 			"tests": null,
 			"currentHelper": "normal",
 			"helperAttributes": {},
-			"time": 1641496802624,
+			"time": 1641500623357,
 			"name": "busca um documento especifico",
 			"description": "busca um documento especifico",
 			"collectionId": "d2901f62-761f-e24b-1eb5-0d1fc5acc318",
 			"responses": []
 		},
 		{
+			"id": "aca72d6c-cb8d-d90a-1662-aae1ba9246cd",
+			"headers": "Accept: application/json\nContent-Type: application/json\nAuthorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTY0MTUwMDU3NiwiZXhwIjoxNjQxNTA0MTc2LCJuYmYiOjE2NDE1MDA1NzYsImp0aSI6IkgzU1EzamtkTHRlRnRVVFoiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.M8BolkMxObI_b46iWCT9M_0dw-897hBAM3PRIukwD5M\n",
+			"headerData": [
+				{
+					"key": "Accept",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTY0MTUwMDU3NiwiZXhwIjoxNjQxNTA0MTc2LCJuYmYiOjE2NDE1MDA1NzYsImp0aSI6IkgzU1EzamtkTHRlRnRVVFoiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.M8BolkMxObI_b46iWCT9M_0dw-897hBAM3PRIukwD5M",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:8000/api/refresh",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1641502148648,
+			"name": "refresh jwt",
+			"description": "rota para buscar todos os documentos da minha API do laravel",
+			"collectionId": "d2901f62-761f-e24b-1eb5-0d1fc5acc318",
+			"responses": [],
+			"rawModeData": "{\n \"email\":\"ryan.maritza@example.com\",\n \"password\":\"password\"\n}"
+		},
+		{
 			"id": "aeee50dc-692e-b6fc-f421-45f21a2f2d59",
-			"headers": "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTY0MTQ4NDY4NywiZXhwIjoxNjQxNDg4Mjg3LCJuYmYiOjE2NDE0ODQ2ODcsImp0aSI6ImJ6R2R0c0NGU3RCNTVkWjYiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.slTCOJ9av-kZSUPk25dkWVyDXjC3bVBDQK-H3NDV0G8\nAccept: application/json\n",
+			"headers": "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9yZWZyZXNoIiwiaWF0IjoxNjQxNTAwNTc2LCJleHAiOjE2NDE1MDQxOTcsIm5iZiI6MTY0MTUwMDU5NywianRpIjoibkplYlhqQnJVaTgzZk02diIsInN1YiI6MSwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.DkjSahXbLdgJ_pv1irKZ_jJVg-o1fk5D_qPr4w6G8Kk\nAccept: application/json\n",
 			"headerData": [
 				{
 					"key": "Authorization",
-					"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTY0MTQ4NDY4NywiZXhwIjoxNjQxNDg4Mjg3LCJuYmYiOjE2NDE0ODQ2ODcsImp0aSI6ImJ6R2R0c0NGU3RCNTVkWjYiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.slTCOJ9av-kZSUPk25dkWVyDXjC3bVBDQK-H3NDV0G8",
+					"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9yZWZyZXNoIiwiaWF0IjoxNjQxNTAwNTc2LCJleHAiOjE2NDE1MDQxOTcsIm5iZiI6MTY0MTUwMDU5NywianRpIjoibkplYlhqQnJVaTgzZk02diIsInN1YiI6MSwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.DkjSahXbLdgJ_pv1irKZ_jJVg-o1fk5D_qPr4w6G8Kk",
 					"description": "",
 					"enabled": true
 				},
@@ -115,7 +199,7 @@
 			"tests": null,
 			"currentHelper": "normal",
 			"helperAttributes": {},
-			"time": 1641496807389,
+			"time": 1641502156197,
 			"name": "busca documentos",
 			"description": "rota para buscar todos os documentos da minha API do laravel",
 			"collectionId": "d2901f62-761f-e24b-1eb5-0d1fc5acc318",
