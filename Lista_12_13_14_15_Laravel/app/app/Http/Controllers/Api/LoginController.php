@@ -15,4 +15,12 @@ class LoginController extends Controller
         }
         return response()->json(["token"=>$token]);
     }
+    public function logout(){
+        auth("api")->logout();
+        return response()->json(["token invalidado com sucesso"], 200);
+    }
+    public function refresh(){
+        $token = auth("api")->refresh();
+        return response()->json(["token"=>$token,"msg"=>"novo token gerado"], 200);
+    }
 }

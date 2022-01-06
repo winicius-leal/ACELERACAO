@@ -23,6 +23,10 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 //rota de login da api para pegar o token 
 Route::post("/login",[LoginController::class, "login"]);
+// rota para logout da api e inserir o token na blacklist
+Route::get("/logout",[LoginController::class, "logout"]);
+// rota para gerar novo token
+Route::get("/refresh",[LoginController::class, "refresh"]);
 
 //rotas protegidas por middleware padrao do jwt auth que precissam do token
 Route::group(["middleware"=>"jwt.auth"], function(){
