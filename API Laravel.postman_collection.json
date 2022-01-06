@@ -4,6 +4,7 @@
 	"description": "",
 	"order": [
 		"aeee50dc-692e-b6fc-f421-45f21a2f2d59",
+		"0834c2a8-f8c2-7ea0-fead-3dbb8f675725",
 		"110e02d7-23d0-287f-6e8a-614dae92cdda",
 		"ca95f2c0-5b76-6311-357f-4aa98e909138",
 		"dcc9c702-8dc7-9ba0-24dd-68b2101e3e6c",
@@ -18,42 +19,59 @@
 	"public": false,
 	"requests": [
 		{
-			"id": "110e02d7-23d0-287f-6e8a-614dae92cdda",
-			"headers": "",
-			"headerData": [],
-			"url": "http://localhost:8000/api/documentos/show/2",
-			"queryParams": [],
-			"pathVariables": {},
-			"pathVariableData": [],
-			"preRequestScript": null,
-			"method": "GET",
-			"collectionId": "d2901f62-761f-e24b-1eb5-0d1fc5acc318",
-			"data": null,
-			"dataMode": "params",
-			"name": "busca um documento especifico",
-			"description": "busca um documento especifico",
-			"descriptionFormat": "html",
-			"time": 1640026319077,
-			"version": 2,
-			"responses": [],
-			"tests": null,
-			"currentHelper": "normal",
-			"helperAttributes": {}
-		},
-		{
-			"id": "aeee50dc-692e-b6fc-f421-45f21a2f2d59",
-			"headers": "",
-			"headerData": [],
-			"url": "http://localhost:8000/api/documentos/index?campo=4",
-			"queryParams": [
+			"id": "0834c2a8-f8c2-7ea0-fead-3dbb8f675725",
+			"headers": "Accept: application/json\nContent-Type: application/json\n",
+			"headerData": [
 				{
-					"key": "campo",
-					"value": "4",
-					"equals": true,
+					"key": "Accept",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Content-Type",
+					"value": "application/json",
 					"description": "",
 					"enabled": true
 				}
 			],
+			"url": "http://localhost:8000/api/login",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1641496805081,
+			"name": "login",
+			"description": "rota para buscar todos os documentos da minha API do laravel",
+			"collectionId": "d2901f62-761f-e24b-1eb5-0d1fc5acc318",
+			"responses": [],
+			"rawModeData": "{\n \"email\":\"ryan.maritza@example.com\",\n \"password\":\"password\"\n}"
+		},
+		{
+			"id": "110e02d7-23d0-287f-6e8a-614dae92cdda",
+			"headers": "Accept: application/json\nAuthorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTY0MTQ4NDY4NywiZXhwIjoxNjQxNDg4Mjg3LCJuYmYiOjE2NDE0ODQ2ODcsImp0aSI6ImJ6R2R0c0NGU3RCNTVkWjYiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.slTCOJ9av-kZSUPk25dkWVyDXjC3bVBDQK-H3NDV0G8\n",
+			"headerData": [
+				{
+					"key": "Accept",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTY0MTQ4NDY4NywiZXhwIjoxNjQxNDg4Mjg3LCJuYmYiOjE2NDE0ODQ2ODcsImp0aSI6ImJ6R2R0c0NGU3RCNTVkWjYiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.slTCOJ9av-kZSUPk25dkWVyDXjC3bVBDQK-H3NDV0G8",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:8000/api/documentos/show/2",
+			"queryParams": [],
 			"preRequestScript": null,
 			"pathVariables": {},
 			"pathVariableData": [],
@@ -63,7 +81,41 @@
 			"tests": null,
 			"currentHelper": "normal",
 			"helperAttributes": {},
-			"time": 1641241778995,
+			"time": 1641496802624,
+			"name": "busca um documento especifico",
+			"description": "busca um documento especifico",
+			"collectionId": "d2901f62-761f-e24b-1eb5-0d1fc5acc318",
+			"responses": []
+		},
+		{
+			"id": "aeee50dc-692e-b6fc-f421-45f21a2f2d59",
+			"headers": "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTY0MTQ4NDY4NywiZXhwIjoxNjQxNDg4Mjg3LCJuYmYiOjE2NDE0ODQ2ODcsImp0aSI6ImJ6R2R0c0NGU3RCNTVkWjYiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.slTCOJ9av-kZSUPk25dkWVyDXjC3bVBDQK-H3NDV0G8\nAccept: application/json\n",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTY0MTQ4NDY4NywiZXhwIjoxNjQxNDg4Mjg3LCJuYmYiOjE2NDE0ODQ2ODcsImp0aSI6ImJ6R2R0c0NGU3RCNTVkWjYiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.slTCOJ9av-kZSUPk25dkWVyDXjC3bVBDQK-H3NDV0G8",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Accept",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:8000/api/documentos/index",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": null,
+			"dataMode": "params",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1641496807389,
 			"name": "busca documentos",
 			"description": "rota para buscar todos os documentos da minha API do laravel",
 			"collectionId": "d2901f62-761f-e24b-1eb5-0d1fc5acc318",
@@ -71,9 +123,28 @@
 		},
 		{
 			"id": "b84e6073-dac8-4404-b4f3-b5ba15109544",
-			"headers": "",
-			"headerData": [],
-			"url": "http://localhost:8000/api/documentos/destroy/4",
+			"headers": "//Authorization: Basic Z2F5bGUuc3RyZWljaEBleGFtcGxlLmNvbTpwYXNzd29yZA==\nAccept: application/json\nAuthorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTY0MTQ4NDY4NywiZXhwIjoxNjQxNDg4Mjg3LCJuYmYiOjE2NDE0ODQ2ODcsImp0aSI6ImJ6R2R0c0NGU3RCNTVkWjYiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.slTCOJ9av-kZSUPk25dkWVyDXjC3bVBDQK-H3NDV0G8\n",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Basic Z2F5bGUuc3RyZWljaEBleGFtcGxlLmNvbTpwYXNzd29yZA==",
+					"description": "",
+					"enabled": false
+				},
+				{
+					"key": "Accept",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTY0MTQ4NDY4NywiZXhwIjoxNjQxNDg4Mjg3LCJuYmYiOjE2NDE0ODQ2ODcsImp0aSI6ImJ6R2R0c0NGU3RCNTVkWjYiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.slTCOJ9av-kZSUPk25dkWVyDXjC3bVBDQK-H3NDV0G8",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:8000/api/documentos/destroy/1",
 			"queryParams": [],
 			"preRequestScript": null,
 			"pathVariables": {},
@@ -84,7 +155,7 @@
 			"tests": null,
 			"currentHelper": "normal",
 			"helperAttributes": {},
-			"time": 1640208232404,
+			"time": 1641496796661,
 			"name": "remove um documento",
 			"description": "",
 			"collectionId": "d2901f62-761f-e24b-1eb5-0d1fc5acc318",
@@ -92,8 +163,21 @@
 		},
 		{
 			"id": "c92fbf40-7608-e69d-0ccf-f88da1fa4966",
-			"headers": "",
-			"headerData": [],
+			"headers": "Accept: application/json\nAuthorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTY0MTQ4NDY4NywiZXhwIjoxNjQxNDg4Mjg3LCJuYmYiOjE2NDE0ODQ2ODcsImp0aSI6ImJ6R2R0c0NGU3RCNTVkWjYiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.slTCOJ9av-kZSUPk25dkWVyDXjC3bVBDQK-H3NDV0G8\n",
+			"headerData": [
+				{
+					"key": "Accept",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTY0MTQ4NDY4NywiZXhwIjoxNjQxNDg4Mjg3LCJuYmYiOjE2NDE0ODQ2ODcsImp0aSI6ImJ6R2R0c0NGU3RCNTVkWjYiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.slTCOJ9av-kZSUPk25dkWVyDXjC3bVBDQK-H3NDV0G8",
+					"description": "",
+					"enabled": true
+				}
+			],
 			"url": "http://localhost:8000/api/documentos/index?fields=title&conditions=id:=:5",
 			"queryParams": [
 				{
@@ -121,7 +205,7 @@
 			"tests": null,
 			"currentHelper": "normal",
 			"helperAttributes": {},
-			"time": 1641327182789,
+			"time": 1641496792366,
 			"name": "busca documentos com filtro por campo e condição",
 			"description": "",
 			"collectionId": "d2901f62-761f-e24b-1eb5-0d1fc5acc318",
@@ -129,26 +213,37 @@
 		},
 		{
 			"id": "ca95f2c0-5b76-6311-357f-4aa98e909138",
-			"headers": "Content-Type: application/x-www-form-urlencoded\n",
+			"headers": "Content-Type: application/x-www-form-urlencoded\nAccept: application/json\nAuthorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTY0MTQ4NDY4NywiZXhwIjoxNjQxNDg4Mjg3LCJuYmYiOjE2NDE0ODQ2ODcsImp0aSI6ImJ6R2R0c0NGU3RCNTVkWjYiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.slTCOJ9av-kZSUPk25dkWVyDXjC3bVBDQK-H3NDV0G8\n",
 			"headerData": [
 				{
 					"key": "Content-Type",
 					"value": "application/x-www-form-urlencoded",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Accept",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTY0MTQ4NDY4NywiZXhwIjoxNjQxNDg4Mjg3LCJuYmYiOjE2NDE0ODQ2ODcsImp0aSI6ImJ6R2R0c0NGU3RCNTVkWjYiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.slTCOJ9av-kZSUPk25dkWVyDXjC3bVBDQK-H3NDV0G8",
 					"description": "",
 					"enabled": true
 				}
 			],
 			"url": "http://localhost:8000/api/documentos/store",
 			"queryParams": [],
+			"preRequestScript": null,
 			"pathVariables": {},
 			"pathVariableData": [],
-			"preRequestScript": null,
 			"method": "POST",
-			"collectionId": "d2901f62-761f-e24b-1eb5-0d1fc5acc318",
 			"data": [
 				{
 					"key": "title",
-					"value": "Boas praticas PHP",
+					"value": "sss",
 					"description": "",
 					"type": "text",
 					"enabled": true
@@ -180,37 +275,54 @@
 					"description": "",
 					"type": "text",
 					"enabled": true
+				},
+				{
+					"key": "",
+					"value": "",
+					"description": "",
+					"type": "text",
+					"enabled": true
 				}
 			],
 			"dataMode": "urlencoded",
-			"name": "novo documento",
-			"description": "",
-			"descriptionFormat": "html",
-			"time": 1640026346724,
-			"version": 2,
-			"responses": [],
 			"tests": null,
 			"currentHelper": "normal",
-			"helperAttributes": {}
+			"helperAttributes": {},
+			"time": 1641496800300,
+			"name": "novo documento",
+			"description": "",
+			"collectionId": "d2901f62-761f-e24b-1eb5-0d1fc5acc318",
+			"responses": []
 		},
 		{
 			"id": "dcc9c702-8dc7-9ba0-24dd-68b2101e3e6c",
-			"headers": "Content-Type: application/x-www-form-urlencoded\n",
+			"headers": "Content-Type: application/x-www-form-urlencoded\nAccept: application/json\nAuthorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTY0MTQ4NDY4NywiZXhwIjoxNjQxNDg4Mjg3LCJuYmYiOjE2NDE0ODQ2ODcsImp0aSI6ImJ6R2R0c0NGU3RCNTVkWjYiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.slTCOJ9av-kZSUPk25dkWVyDXjC3bVBDQK-H3NDV0G8\n",
 			"headerData": [
 				{
 					"key": "Content-Type",
 					"value": "application/x-www-form-urlencoded",
 					"description": "",
 					"enabled": true
+				},
+				{
+					"key": "Accept",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTY0MTQ4NDY4NywiZXhwIjoxNjQxNDg4Mjg3LCJuYmYiOjE2NDE0ODQ2ODcsImp0aSI6ImJ6R2R0c0NGU3RCNTVkWjYiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.slTCOJ9av-kZSUPk25dkWVyDXjC3bVBDQK-H3NDV0G8",
+					"description": "",
+					"enabled": true
 				}
 			],
 			"url": "http://localhost:8000/api/documentos/update/4",
 			"queryParams": [],
+			"preRequestScript": null,
 			"pathVariables": {},
 			"pathVariableData": [],
-			"preRequestScript": null,
 			"method": "PUT",
-			"collectionId": "d2901f62-761f-e24b-1eb5-0d1fc5acc318",
 			"data": [
 				{
 					"key": "title",
@@ -249,25 +361,37 @@
 				}
 			],
 			"dataMode": "urlencoded",
-			"name": "edita um documento ",
-			"description": "",
-			"descriptionFormat": "html",
-			"time": 1640026412756,
-			"version": 2,
-			"responses": [],
 			"tests": null,
 			"currentHelper": "normal",
-			"helperAttributes": {}
+			"helperAttributes": {},
+			"time": 1641496798304,
+			"name": "edita um documento ",
+			"description": "",
+			"collectionId": "d2901f62-761f-e24b-1eb5-0d1fc5acc318",
+			"responses": []
 		},
 		{
 			"id": "fc14c491-d900-3db0-ee59-e0d4b9508908",
-			"headers": "",
-			"headerData": [],
-			"url": "http://localhost:8000/api/documentos/index?fields=id",
+			"headers": "Accept: application/json\nAuthorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTY0MTQ4NDY4NywiZXhwIjoxNjQxNDg4Mjg3LCJuYmYiOjE2NDE0ODQ2ODcsImp0aSI6ImJ6R2R0c0NGU3RCNTVkWjYiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.slTCOJ9av-kZSUPk25dkWVyDXjC3bVBDQK-H3NDV0G8\n",
+			"headerData": [
+				{
+					"key": "Accept",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Authorization",
+					"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTY0MTQ4NDY4NywiZXhwIjoxNjQxNDg4Mjg3LCJuYmYiOjE2NDE0ODQ2ODcsImp0aSI6ImJ6R2R0c0NGU3RCNTVkWjYiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.slTCOJ9av-kZSUPk25dkWVyDXjC3bVBDQK-H3NDV0G8",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:8000/api/documentos/index?fields=id,title",
 			"queryParams": [
 				{
 					"key": "fields",
-					"value": "id",
+					"value": "id,title",
 					"equals": true,
 					"description": "",
 					"enabled": true
@@ -283,7 +407,7 @@
 			"tests": null,
 			"currentHelper": "normal",
 			"helperAttributes": {},
-			"time": 1641302125675,
+			"time": 1641496794510,
 			"name": "busca documentos com filtro por campo",
 			"description": "",
 			"collectionId": "d2901f62-761f-e24b-1eb5-0d1fc5acc318",

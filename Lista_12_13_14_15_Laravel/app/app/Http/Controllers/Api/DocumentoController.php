@@ -17,7 +17,10 @@ class DocumentoController extends Controller
     public function __construct(Documento $model)
     {
         $this->model = $model;
+        //aplicando middleware after para todas as todas dessa controller
+        $this->middleware('jwt.auth');
     }
+     
 
     function index(Request $request){
 
