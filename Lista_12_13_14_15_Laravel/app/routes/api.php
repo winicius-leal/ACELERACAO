@@ -3,6 +3,7 @@
 use App\Http\Controllers\Api\DocumentoController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use League\CommonMark\Node\Block\Document;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,6 +25,8 @@ Route::get("documentos/show/{id}", [DocumentoController::class, 'show']);
 Route::post("documentos/store", [DocumentoController::class, 'store']);
 Route::put("documentos/update/{id}", [DocumentoController::class, 'update']);
 Route::delete("documentos/destroy/{id}", [DocumentoController::class, 'destroy'])->middleware("auth.basic");
+
+Route::post("/login",[LoginController::class, "login"]);
 
 /*
 Route::namespace('App\Http\Controllers\Api')->group(function(){
