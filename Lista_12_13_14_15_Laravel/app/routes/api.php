@@ -4,6 +4,7 @@ use App\Http\Controllers\Api\DocumentoController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use League\CommonMark\Node\Block\Document;
+use App\Http\Controllers\Api\LoginController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,13 +21,20 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get("documentos/index", [DocumentoController::class, 'index']);
-Route::get("documentos/show/{id}", [DocumentoController::class, 'show']);
-Route::post("documentos/store", [DocumentoController::class, 'store']);
-Route::put("documentos/update/{id}", [DocumentoController::class, 'update']);
-Route::delete("documentos/destroy/{id}", [DocumentoController::class, 'destroy'])->middleware("auth.basic");
-
+//rota de login da api para pegar o token 
 Route::post("/login",[LoginController::class, "login"]);
+
+//rotas protegidas por middleware padrao do jwt auth que precissam do token
+Route::group(["middleware"=>"jwt.auth"], function(){
+    Route::get("documentos/index", [DocumentoController::class, 'index']);
+    Route::get("documentos/show/{id}", [DocumentoController::class, 'show']);
+    Route::post("documentos/store", [DocumentoController::class, 'store']);
+    Route::put("documentos/update/{id}", [DocumentoController::class, 'update']);
+    //Route::delete("documentos/destroy/{id}", [DocumentoController::class, 'destroy'])->middleware("auth.basic");
+    Route::delete("documentos/destroy/{id}", [DocumentoController::class, 'destroy']);
+});
+ 
+
 
 /*
 Route::namespace('App\Http\Controllers\Api')->group(function(){
