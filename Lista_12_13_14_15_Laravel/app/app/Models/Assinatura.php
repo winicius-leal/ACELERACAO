@@ -9,4 +9,5 @@ class Assinatura extends Model
 {
     use HasFactory;
     protected $fillable = ["qntCharactersSignature", "defaultSignature", "subscriptionNumberUsed"];
+    protected $connection = "pgsql";
 }

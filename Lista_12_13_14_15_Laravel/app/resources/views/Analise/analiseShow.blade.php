@@ -3,19 +3,22 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     </head>
     <body>
-        <h1> Informações da Assinatura </h1>
+        <h1> Informações da analise </h1>
         
         <div class="callout">
-            {{$assinatura}}
+            {{$analises}}
         </div>
         <hr>
-        <a href="{{route('assinatura.index')}}">Voltar para a tela inicial</a>
+        <a href="{{route('analises.index')}}">
+            <button class="btn btn-primary">Voltar</button>
+        </a>
         
-        <form action="{{route('assinatura.destroy', $assinatura->id)}}" method="post">
+        <form action="{{route('analises.destroy', $analises->id)}}" method="post">
             @csrf
             @method('delete')
-            <button class="btn btn-danger" type="submit">Deletar este documento</button>
+            <button class="btn btn-danger" type="submit">Deletar esta analise</button>
         </form>    
+
 
     </body>
 </html>

@@ -1,10 +1,13 @@
 <?php
 
+use App\Http\Controllers\Api\AnaliseController;
 use App\Http\Controllers\Api\DocumentoController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use League\CommonMark\Node\Block\Document;
 use App\Http\Controllers\Api\LoginController;
+use App\Http\Controllers\Api\AssinaturaController;
+use App\Http\Controllers\Api\RelatorioController;
 
 /*
 |--------------------------------------------------------------------------
@@ -36,9 +39,11 @@ Route::group(["middleware"=>"jwt.auth"], function(){
     Route::put("documentos/update/{id}", [DocumentoController::class, 'update']);
     //Route::delete("documentos/destroy/{id}", [DocumentoController::class, 'destroy'])->middleware("auth.basic");
     Route::delete("documentos/destroy/{id}", [DocumentoController::class, 'destroy']);
+    
+    Route::apiResource("analises", AnaliseController::class);
+    Route::apiResource("assinaturas", AssinaturaController::class);
+    Route::apiResource("relatorio", RelatorioController::class);
 });
- 
-
 
 /*
 Route::namespace('App\Http\Controllers\Api')->group(function(){

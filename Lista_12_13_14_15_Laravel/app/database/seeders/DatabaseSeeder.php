@@ -17,5 +17,11 @@ class DatabaseSeeder extends Seeder
         
         //vou comentar pra rodar o seed do DocumentoSeeder direto no terminal
         //\App\Models\Documento::factory(600)->create();
+
+        
+        \App\Models\Documento::factory(600)->create();
+        \App\Models\User::factory(1)->create();
+        \App\Models\Assinatura::factory(100)->create();
+        \App\Models\Analise::factory(50)->create();
     }
 }

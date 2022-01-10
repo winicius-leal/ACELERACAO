@@ -13,7 +13,7 @@ class CreateAssinaturasTable extends Migration
      */
     public function up()
     {
-        Schema::create('assinaturas', function (Blueprint $table) {
+        Schema::connection("pgsql")->create('assinaturas', function (Blueprint $table) {
             $table->id();
             $table->integer("qntCharactersSignature");
             $table->string("defaultSignature");

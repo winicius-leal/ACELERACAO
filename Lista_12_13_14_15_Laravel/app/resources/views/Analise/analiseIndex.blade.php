@@ -3,7 +3,8 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     </head>
     <body>
-        <h1> PERFIL </h1>
+
+        <h1> LISTA DE ANALISES </h1>
 
         @if ($errors->any())
             @foreach ($errors->all() as $error)
@@ -17,6 +18,7 @@
             {{ session('danger')}}
             </div>
         @endif
+
         @if (session('success'))
             <div class="alert alert-success">
                 <button type="button" class="close" data-dismiss="alert">&times;</button>
@@ -24,39 +26,16 @@
             </div>
         @endif
 
-        @foreach ($perfil as $dados)
+        @foreach ($analises as $analise)
         <li>
-            {{$dados}}
+            {{$analise}} <a href="{{route('analises.show', $analise->id)}}"> Ver analise </a>
         </li>
         @endforeach
 
         <hr>
-        <a href="{{route('usuario.login')}}">
-            <button>
-                Fazer login
-            </button>
+        <a href="{{route('analises.create')}}">
+            <button class="btn btn-success">Criar nova analise</button>
         </a>
-        <a href="{{route('usuario.logoff')}}">
-            <button>
-                Fazer Logoff
-            </button>
-        </a>
-
-        <a href="{{route('documento.index')}}">
-            <button>
-                Ir para Doucmentos
-            </button>
-        </a>
-        <a href="{{route('assinatura.index')}}">
-            <button>
-                Ir para Assinaturas
-            </button>
-        </a>
-        <a href="{{route('analises.index')}}">
-            <button>
-                Ir para Analises
-            </button>
-        </a>
-
+        
     </body>
 </html>
