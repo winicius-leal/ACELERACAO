@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class AnaliseInsertUpdate extends FormRequest
+class RequestAnaliseInsertUpdate extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -30,5 +30,20 @@ class AnaliseInsertUpdate extends FormRequest
             "data_analise"=>"required",
             "visualizadores"=>"required|number"
         ];
+    }
+    public function messages()
+    {
+        return [
+            
+            'id_doc.required' => 'o campo id_doc é obrigatório.',
+            
+            'id_assinatura.required' => 'o campo id_assinatura é obrigatório.',
+           
+            'status.required' => 'o campo status é obrigatório.',
+
+            'data_analise.required' => 'o campo data_analise é obrigatório.',
+
+            'visualizadores.required' => 'o campo visualizadores é obrigatório.',
+        ];   
     }
 }

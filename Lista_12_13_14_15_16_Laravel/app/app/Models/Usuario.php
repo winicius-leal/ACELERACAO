@@ -9,6 +9,8 @@ class Usuario extends Model
 {
     use HasFactory;
 
+    protected $connection = "pgsql";
+
     public string $nome;
     public int $idade;
 

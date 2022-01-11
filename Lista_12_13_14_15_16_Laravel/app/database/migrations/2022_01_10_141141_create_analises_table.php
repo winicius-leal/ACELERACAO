@@ -18,7 +18,7 @@ class CreateAnalisesTable extends Migration
             $table->integer("id_doc");
             $table->integer("id_assinatura");
             $table->string("status");
-            $table->date("data_analise");
+            $table->dateTime("data_analise");
             $table->integer("visualizadores");
             $table->timestamps();
         });
@@ -31,6 +31,6 @@ class CreateAnalisesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('analises');
+        Schema::connection("pgsql")->dropIfExists('analises');
     }
 }

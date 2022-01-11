@@ -1,7 +1,12 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\{UsuarioController,DocumentoController,AssinaturaController,AnaliseController};
+use App\Http\Controllers\{
+    UsuarioController,
+    DocumentoController,
+    AssinaturaController,
+    AnaliseController
+};
 
 
 Route::get('/', function () {
@@ -36,6 +41,5 @@ Route::middleware("verificaAutenticacao")->group(function(){
     Route::get('/documento/editar/{id}', [DocumentoController::class, 'edit'])->name('documento.edit');
     Route::put('/documento/editar/{id}', [DocumentoController::class, 'update'])->name('documento.update');
 
+    Route::resource('analises', AnaliseController::class);
 });
-
-Route::resource('analises', AnaliseController::class);

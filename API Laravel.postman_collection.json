@@ -4,6 +4,7 @@
 	"description": "",
 	"order": [
 		"aeee50dc-692e-b6fc-f421-45f21a2f2d59",
+		"b7797885-4c52-29b9-766e-e9cccb749a03",
 		"0834c2a8-f8c2-7ea0-fead-3dbb8f675725",
 		"00d8bf19-0dec-30dd-9c99-45a1e1ab6636",
 		"aca72d6c-cb8d-d90a-1662-aae1ba9246cd",
@@ -89,12 +90,12 @@
 			"tests": null,
 			"currentHelper": "normal",
 			"helperAttributes": {},
-			"time": 1641502154050,
+			"time": 1641841944676,
 			"name": "login jwt",
 			"description": "rota para buscar todos os documentos da minha API do laravel",
 			"collectionId": "d2901f62-761f-e24b-1eb5-0d1fc5acc318",
 			"responses": [],
-			"rawModeData": "{\n \"email\":\"ryan.maritza@example.com\",\n \"password\":\"password\"\n}"
+			"rawModeData": "{\n \"email\":\"gleason.maribel@example.com\",\n \"password\":\"password\"\n}"
 		},
 		{
 			"id": "110e02d7-23d0-287f-6e8a-614dae92cdda",
@@ -201,6 +202,40 @@
 			"helperAttributes": {},
 			"time": 1641502156197,
 			"name": "busca documentos",
+			"description": "rota para buscar todos os documentos da minha API do laravel",
+			"collectionId": "d2901f62-761f-e24b-1eb5-0d1fc5acc318",
+			"responses": []
+		},
+		{
+			"id": "b7797885-4c52-29b9-766e-e9cccb749a03",
+			"headers": "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTY0MTkxMjk0MCwiZXhwIjoxNjQxOTE2NTQwLCJuYmYiOjE2NDE5MTI5NDAsImp0aSI6IktrOUE1MUJJVHlVdzBmTlYiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.pFFPV14HtM1UoQYDWcznZiKOKDd1uQl4t1wdgAf68pQ\nAccept: application/json\n",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTY0MTkxMjk0MCwiZXhwIjoxNjQxOTE2NTQwLCJuYmYiOjE2NDE5MTI5NDAsImp0aSI6IktrOUE1MUJJVHlVdzBmTlYiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.pFFPV14HtM1UoQYDWcznZiKOKDd1uQl4t1wdgAf68pQ",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Accept",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:8000/api/relatorios",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": null,
+			"dataMode": "params",
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1641913477337,
+			"name": "busca analises",
 			"description": "rota para buscar todos os documentos da minha API do laravel",
 			"collectionId": "d2901f62-761f-e24b-1eb5-0d1fc5acc318",
 			"responses": []
